@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block css %}{% static 'polls/main.css' %}{% endblock %}
 
 {% block title %}DikaFiles{% endblock %}
+
 {% block content %}
-	test
+	<div class="main">
+		<h1 class="title">DikaFiles</h1>
+
+		<p class="description">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Non harum, quibusdam blanditiis maiores deleniti nam vero quam nostrum nesciunt quisquam voluptatem maxime amet placeat, adipisci, accusantium quos repellendus dolores enim?
+		</p>
+
+		<div class="imageCarousel">
+			<div class="image"></div>
+			<div class="image"></div>
+			<div class="image"></div>
+			<div class="image"></div>
+			<div class="image"></div>
+		</div>
+
+		<a class="download" href="/download">Download</a>
+	</div>
 {% endblock %}

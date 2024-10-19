@@ -1,0 +1,68 @@
+html {
+    background: linear-gradient(125deg, #130f1e, #252344);
+    background-repeat: no-repeat;
+    height: 100svh;
+    
+
+}
+
+
+.main {
+    width:70%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #9392ff;
+    margin: auto;
+    max-width: 1000px;
+    padding-top: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    color: #b5b5ff;
+    text-shadow: #9392ff 0px 0px 10px;
+}
+.imageCarousel {
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+    gap: 1rem;
+    .image {
+        height: 100%;
+        width: 100%;
+        background-color: #9392ff;
+        border-radius: 1rem;
+    }
+}
+
+.download {
+    width: min-content;
+    height: min-content;
+    padding: 0.75rem 1.5rem;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: row;
+
+    font-size: 1.25rem;
+    color: #130f1e;
+    background-color: #9392ff;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: #9392ff 0 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    img {
+        height: 1.2rem;
+        color:#130f1e;
+    }
+}
+.download:hover {
+    
+    box-shadow: #9392ff 0 0 20px;
+}
