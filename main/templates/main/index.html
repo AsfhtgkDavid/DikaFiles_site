@@ -6,21 +6,22 @@
 {% block title %}DikaFiles{% endblock %}
 
 {% block content %}
+	<script src="{% static 'polls/main.js' %}" defer></script>
 	<div class="main">
 		<h1 class="title">DikaFiles</h1>
 
 		<p class="description">
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Non harum, quibusdam blanditiis maiores deleniti nam vero quam nostrum nesciunt quisquam voluptatem maxime amet placeat, adipisci, accusantium quos repellendus dolores enim?
 		</p>
-
-		<div class="imageCarousel">
-			<div class="image"></div>
-			<div class="image"></div>
-			<div class="image"></div>
-			<div class="image"></div>
-			<div class="image"></div>
+		<div class="carouselWrapper">
+			<button carouselButton next=-1>&lt;</button>
+			<div class="imageCarousel">
+				<img src="static/polls/image1.png" alt="">
+				<img src="static/polls/image2.png" alt="">
+				<img src="static/polls/image3.png" alt="">
+			</div>
+		 	<button carouselButton next=1>></button>
 		</div>
-
 		<a class="download" href="/download">Download</a>
 	</div>
 {% endblock %}

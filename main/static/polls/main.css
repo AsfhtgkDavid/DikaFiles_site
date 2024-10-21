@@ -1,9 +1,13 @@
 html {
-    background: linear-gradient(125deg, #130f1e, #252344);
     background-repeat: no-repeat;
     height: 100svh;
     
-
+    --button-colorA: #44bb55;
+    --button-colorB: #4455bb;
+    --text-color-button:white;
+    --text-color:#111;
+    --bg-color:white;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -12,11 +16,10 @@ html {
     height: 100%;
     border-radius: 1rem;
     padding: 1rem;
-    color: #9392ff;
     margin: auto;
     max-width: 1000px;
     padding-top: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -24,45 +27,63 @@ html {
 
 .title {
     font-size: 3rem;
-    color: #b5b5ff;
-    text-shadow: #9392ff 0px 0px 10px;
+    color:var(--text-color)
 }
+
 .imageCarousel {
-    height: 15rem;
+    height: 20rem;
+    width: 28rem;
+    gap:1rem;
     display: flex;
     flex-direction: row;
     overflow-x: hidden;
-    gap: 1rem;
-    .image {
-        height: 100%;
-        width: 100%;
-        background-color: #9392ff;
-        border-radius: 1rem;
-    }
+
+
+}
+
+button[carouselButton] {
+    font-size: 2rem;
+    line-height: 2rem;
+
+    transition: 0.1s;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--button-colorB);
+    color: var(--text-color-button);
+}
+button[carouselButton]:hover,button[carouselButton]:focus {
+    cursor: pointer;
+    background-color: color-mix(in srgb, var(--button-colorB) 80%, black 20%)
+}
+button[carouselButton]:focus {
+    outline: none;
+}
+.imageCarousel > img {
+    height: 100%;
+}
+
+.carouselWrapper {
+    display: flex;
+    flex-direction: row;
+    gap:0.5rem;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .download {
-    width: min-content;
-    height: min-content;
-    padding: 0.75rem 1.5rem;
-    transition: 0.2s;
-    display: flex;
-    flex-direction: row;
-
-    font-size: 1.25rem;
-    color: #130f1e;
-    background-color: #9392ff;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: #9392ff 0 0 10px;
-    font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
-    img {
-        height: 1.2rem;
-        color:#130f1e;
-    }
+    background-color: var(--button-colorA);
+    color: var(--text-color-button);
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 0.5rem;
+    transition: 0.1s;
 }
-.download:hover {
+.download:hover,.download:focus {
     
-    box-shadow: #9392ff 0 0 20px;
+    background-color: color-mix(in srgb, var(--button-colorA) 80%, black 20%)
+}
+.download:focus {
+    outline: none;
 }
