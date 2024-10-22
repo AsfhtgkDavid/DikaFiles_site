@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}{% static 'polls/main.css' %}{% endblock %}
+{% block css %}{% static 'main.css' %}{% endblock %}
 
 {% block title %}DikaFiles{% endblock %}
 
 {% block content %}
-	<script src="{% static 'polls/main.js' %}" defer></script>
+	<script src="{% static 'main.js' %}" defer></script>
 	<div class="main">
 		<h1 class="title">DikaFiles</h1>
 
@@ -16,9 +16,9 @@
 		<div class="carouselWrapper">
 			<button carouselButton next=-1>&lt;</button>
 			<div class="imageCarousel">
-				<img src="static/polls/image1.png" alt="">
-				<img src="static/polls/image2.png" alt="">
-				<img src="static/polls/image3.png" alt="">
+				<img src="static/image1.png" alt="">
+				<img src="static/image2.png" alt="">
+				<img src="static/image3.png" alt="">
 			</div>
 		 	<button carouselButton next=1>></button>
 		</div>
