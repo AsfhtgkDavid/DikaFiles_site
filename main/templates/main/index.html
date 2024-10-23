@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}{% static 'main.css' %}{% endblock %}
+{% block css %}{% static 'main/main.css' %}{% endblock %}
 
 {% block title %}DikaFiles{% endblock %}
 
 {% block content %}
-	<script src="{% static 'main.js' %}" defer></script>
+	<script src="{% static 'main/main.js' %}" defer></script>
 	<div class="main">
 		<h1 class="title">DikaFiles</h1>
 
@@ -15,10 +15,17 @@
 		</p>
 		<div class="carouselWrapper">
 			<button carouselButton next=-1>&lt;</button>
-			<div class="imageCarousel">
-				<img src="static/image1.png" alt="">
-				<img src="static/image2.png" alt="">
-				<img src="static/image3.png" alt="">
+			<div class="mainCarouselContent">
+				<div class="imageCarousel">
+					<img src="static/main/image1.png" alt="">
+					<img src="static/main/image2.png" alt="">
+					<img src="static/main/image3.png" alt="">
+				</div>
+				<!-- <div class="imageDots">
+					<p active>.</p>
+					<p>.</p>
+					<p>.</p>
+				</div> -->
 			</div>
 		 	<button carouselButton next=1>></button>
 		</div>

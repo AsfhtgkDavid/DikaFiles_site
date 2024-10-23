@@ -65,12 +65,19 @@ button[carouselButton]:focus {
 .carouselWrapper {
     display: flex;
     flex-direction: row;
-    gap:0.5rem;
+    /* gap:0.5rem; */
     justify-content: center;
     align-items: center;
 
 }
 
+
+.carouselDots {
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
 .download {
     text-decoration: none;
     background-color: var(--button-colorA);
