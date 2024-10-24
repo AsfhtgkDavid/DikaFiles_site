@@ -10,6 +10,12 @@ let isSwitchingManually = false
 //     container.scrollLeft = container.scrollLeft % 1500
 //     console.log(container.scrollLeft)
 //   };
+
+let scrollIntoViewIfNeeded;
+
+import(
+  'https://esm.sh/scroll-into-view-if-needed'
+).then(({default: scrollFunc}) => {scrollIntoViewIfNeeded = scrollFunc})
   
 
 
@@ -21,7 +27,7 @@ function nextImage(next) {
     //     left: images[active].offsetLeft,
     //     behavior: "smooth",
     //   });
-    images[active].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' })
+    scrollIntoViewIfNeeded(images[active], { behavior: 'smooth', block: 'nearest', inline: 'center', scrollMode: 'if-needed' })
     //scrollIntoViewHorizontally(carousel,images[active])
 }
 document.querySelectorAll("button[carouselButton]").forEach((button)=>{
