@@ -14,20 +14,21 @@
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Non harum, quibusdam blanditiis maiores deleniti nam vero quam nostrum nesciunt quisquam voluptatem maxime amet placeat, adipisci, accusantium quos repellendus dolores enim?
 		</p>
 		<div class="carouselWrapper">
-			<button carouselButton next=-1>&lt;</button>
-			<div class="mainCarouselContent">
-				<div class="imageCarousel">
-					<img src="static/main/image1.png" alt="">
-					<img src="static/main/image2.png" alt="">
-					<img src="static/main/image3.png" alt="">
-				</div>
-				<!-- <div class="imageDots">
-					<p active>.</p>
-					<p>.</p>
-					<p>.</p>
-				</div> -->
+			<div class="imageCarousel">
+				<button carouselButton next=-1>&lt;</button>
+				<img src="static/main/image1.png" draggable="false" alt="" active="true">
+				<img src="static/main/image2.png" draggable="false" alt="">
+				<img src="static/main/image3.png" draggable="false" alt="">
+				<button carouselButton next=1>></button>
+
+
+
 			</div>
-		 	<button carouselButton next=1>></button>
+			<div class="imageDots">
+				<p active="true">.</p>
+				<p>.</p>
+				<p>.</p>
+			</div>
 		</div>
 		<a class="download" href={% url 'download-view' %}>Download</a>
 	</div>
