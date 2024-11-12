@@ -1,4 +1,5 @@
 import mimetypes
+from urllib.parse import quote
 
 from django.conf import settings
 from django.http import HttpRequest, HttpResponseBadRequest, HttpResponse, Http404
@@ -35,7 +36,7 @@ def download_api(request: HttpRequest):
     path = open(filepath, 'rb')
     mime_type, _ = mimetypes.guess_type(filepath)
     response = HttpResponse(path, content_type=mime_type)
-    response['Content-Disposition'] = "attachment; \"filename=%s\"" % filename.split("/")[-1]
+    response['Content-Disposition'] = "attachment; filename*=UTF-8''%s" % quote(filename.split("/")[-1])
     return response
 
     return HttpResponse(f"{platform}:{version}")
