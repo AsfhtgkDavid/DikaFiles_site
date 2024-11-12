@@ -17,7 +17,7 @@ html {
     border-radius: 1rem;
     padding: 1rem;
     margin: auto;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     padding-top: 2rem;
 
     display: flex;
@@ -30,45 +30,51 @@ html {
     color:var(--text-color)
 }
 
+.carouselWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .imageCarousel {
-    height: 20rem;
-    width: 28rem;
     gap:1rem;
     display: flex;
     flex-direction: row;
-    overflow-x: hidden;
-
-
-}
-
-button[carouselButton] {
-    font-size: 2rem;
-    line-height: 2rem;
-
-    transition: 0.1s;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: var(--button-colorB);
-    color: var(--text-color-button);
-}
-button[carouselButton]:hover,button[carouselButton]:focus {
-    cursor: pointer;
-    background-color: color-mix(in srgb, var(--button-colorB) 80%, black 20%)
-}
-button[carouselButton]:focus {
-    outline: none;
-}
-.imageCarousel > img {
-    height: 100%;
-}
-
-.carouselWrapper {
-    display: flex;
-    flex-direction: row;
-    gap:0.5rem;
+    overflow:clip;
     justify-content: center;
     align-items: center;
 
+}
+
+
+.imageCarousel > img {
+    height: 100%;
+    display: none;
+    position: relative;
+    left: 0%;
+}
+
+.imageCarousel > img[active="true"]{
+   display: block; 
+}
+
+
+
+.imageDots {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+.imageDots > p{
+    margin: 0 auto;
+}
+.imageDots > p[active="true"],.imageDots > p:hover {
+    color: var(--button-colorB);
+}
+.imageDots > p:hover {
+    cursor: pointer;
 }
 
 .download {

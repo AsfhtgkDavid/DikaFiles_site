@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block css %}{% static 'main.css' %}{% endblock %}
+{% block css %}{% static 'main/main.css' %}{% endblock %}
 
 {% block title %}DikaFiles{% endblock %}
 
 {% block content %}
-	<script src="{% static 'main.js' %}" defer></script>
+	<script src="{% static 'main/main.js' %}"  type="module" defer></script>
 	<div class="main">
 		<h1 class="title">DikaFiles</h1>
 
@@ -14,14 +14,22 @@
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Non harum, quibusdam blanditiis maiores deleniti nam vero quam nostrum nesciunt quisquam voluptatem maxime amet placeat, adipisci, accusantium quos repellendus dolores enim?
 		</p>
 		<div class="carouselWrapper">
-			<button carouselButton next=-1>&lt;</button>
 			<div class="imageCarousel">
-				<img src="static/image1.png" alt="">
-				<img src="static/image2.png" alt="">
-				<img src="static/image3.png" alt="">
+				<button carouselButton next=-1>&lt;</button>
+				<img src="static/main/image1.png" draggable="false" alt="" active="true">
+				<img src="static/main/image2.png" draggable="false" alt="">
+				<img src="static/main/image3.png" draggable="false" alt="">
+				<button carouselButton next=1>></button>
+
+
+
 			</div>
-		 	<button carouselButton next=1>></button>
+			<div class="imageDots">
+				<p active="true">.</p>
+				<p>.</p>
+				<p>.</p>
+			</div>
 		</div>
-		<a class="download" href="/download">Download</a>
+		<a class="download" href={% url 'download-view' %}>Download</a>
 	</div>
 {% endblock %}
